@@ -53,17 +53,27 @@ export default function Hero() {
         <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 ${mounted ? 'animate-slide-up' : 'opacity-0'}`} style={{animationDelay: '0.3s'}}>
           <button
             onClick={scrollToRegistration}
-            className="group relative px-8 py-4 bg-gradient-to-r from-[#fe2c55] to-[#25f4ee] rounded-full font-bold text-lg overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(254,44,85,0.5)] min-w-[240px]"
+            className="group relative px-8 py-4 bg-gradient-to-r from-[#fe2c55] to-[#25f4ee] rounded-full font-bold text-lg overflow-hidden transition-all hover:scale-110 hover:shadow-[0_0_40px_rgba(254,44,85,0.8)] min-w-[240px] animate-bounce-slow"
           >
-            <span className="relative z-10">🎫 Купить билет — 2000₸</span>
+            {/* Shimmer effect */}
+            <div className="absolute inset-0 w-full h-full">
+              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12"></div>
+            </div>
+            <span className="relative z-10 flex items-center justify-center gap-2">
+              🎫 Купить билет — 2000₸
+            </span>
             <div className="absolute inset-0 bg-gradient-to-r from-[#25f4ee] to-[#fe2c55] opacity-0 group-hover:opacity-100 transition-opacity"></div>
           </button>
 
           <button
             onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-8 py-4 bg-white/5 backdrop-blur-sm border-2 border-white/20 rounded-full font-bold text-lg hover:bg-white/10 hover:border-[#25f4ee] transition-all min-w-[200px]"
+            className="group px-8 py-4 bg-white/5 backdrop-blur-sm border-2 border-white/20 rounded-full font-bold text-lg hover:bg-white/10 hover:border-[#25f4ee] transition-all min-w-[200px] hover:animate-wiggle relative overflow-hidden"
           >
-            Подробнее →
+            <span className="relative z-10 inline-flex items-center gap-2">
+              Подробнее
+              <span className="animate-slide-lr inline-block">→</span>
+            </span>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#fe2c55]/0 via-[#fe2c55]/10 to-[#fe2c55]/0 opacity-0 group-hover:opacity-100 transition-opacity"></div>
           </button>
         </div>
 

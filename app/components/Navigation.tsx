@@ -61,9 +61,14 @@ export default function Navigation() {
           {/* CTA Button */}
           <button
             onClick={() => scrollToSection('registration')}
-            className="relative px-6 py-2.5 bg-gradient-to-r from-[#fe2c55] to-[#25f4ee] rounded-full font-bold text-sm overflow-hidden group hover:scale-105 transition-all hover:shadow-[0_0_20px_rgba(254,44,85,0.5)]"
+            className="relative px-6 py-2.5 bg-gradient-to-r from-[#fe2c55] to-[#25f4ee] rounded-full font-bold text-sm overflow-hidden group hover:scale-110 transition-all hover:shadow-[0_0_25px_rgba(254,44,85,0.7)] animate-pulse"
           >
-            <span className="relative z-10">Купить билет</span>
+            {/* Shimmer on hover */}
+            <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+            <span className="relative z-10 inline-flex items-center gap-1">
+              <span className="animate-bounce-slow inline-block">🎫</span>
+              Купить билет
+            </span>
             <div className="absolute inset-0 bg-gradient-to-r from-[#25f4ee] to-[#fe2c55] opacity-0 group-hover:opacity-100 transition-opacity"></div>
           </button>
         </div>

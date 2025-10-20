@@ -63,10 +63,15 @@ export default function RegistrationForm() {
 
             <button
               onClick={handleRegisterClick}
-              className="group/btn relative px-10 py-5 bg-gradient-to-r from-[#fe2c55] to-[#25f4ee] rounded-full font-black text-xl overflow-hidden transition-all hover:scale-110 hover:shadow-[0_0_50px_rgba(254,44,85,0.6)] min-w-[280px]"
+              className="group/btn relative px-10 py-5 bg-gradient-to-r from-[#fe2c55] to-[#25f4ee] rounded-full font-black text-xl overflow-hidden transition-all hover:scale-110 hover:shadow-[0_0_50px_rgba(254,44,85,0.8)] min-w-[280px] animate-bounce-slow"
             >
+              {/* Animated shimmer */}
+              <div className="absolute inset-0 w-full h-full">
+                <div className="absolute inset-0 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-12"></div>
+              </div>
               <span className="relative z-10 flex items-center justify-center gap-2">
-                ✨ Зарегистрироваться
+                <span className="animate-wiggle inline-block">✨</span>
+                Зарегистрироваться
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-[#25f4ee] to-[#fe2c55] opacity-0 group-hover/btn:opacity-100 transition-opacity"></div>
             </button>
