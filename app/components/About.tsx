@@ -1,23 +1,6 @@
 'use client';
 
 export default function About() {
-  const program = [
-    {
-      icon: "🗣",
-      title: "Ведущий в эти выходные: Диас",
-      description: ""
-    },
-    {
-      icon: "🎮",
-      title: "Игры, нетворкинг, делимся опытом и лайфхаками",
-      description: ""
-    },
-    {
-      icon: "⚠️",
-      title: "Места ограничены",
-      description: "Максимум 10 человек"
-    }
-  ];
 
   return (
     <section id="about" className="py-24 px-4 bg-gradient-to-b from-orange-50 to-amber-50">
@@ -36,20 +19,8 @@ export default function About() {
         <div className="max-w-2xl mx-auto mb-16">
           <div className="bg-white p-10 rounded-2xl shadow-xl border-2 border-orange-200 hover:border-orange-400 transition-all">
             <div className="mb-6">
-              <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-orange-100 to-amber-100 overflow-hidden mb-6 ring-4 ring-orange-300 ring-offset-4">
-                <img
-                  src="/host-photo.jpg"
-                  alt="Диас"
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none';
-                    const sibling = e.currentTarget.nextElementSibling as HTMLElement;
-                    if (sibling) sibling.style.display = 'flex';
-                  }}
-                />
-                <div className="w-full h-full flex items-center justify-center text-6xl" style={{display: 'none'}}>
-                  🎤
-                </div>
+              <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-orange-100 to-amber-100 overflow-hidden mb-6 ring-4 ring-orange-300 ring-offset-4 flex items-center justify-center">
+                <div className="text-7xl">🎤</div>
               </div>
             </div>
             <h3 className="text-3xl font-bold text-slate-900 mb-3 text-center">
