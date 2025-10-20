@@ -47,21 +47,15 @@ export default function RegistrationForm() {
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
 
           <div className="relative z-10">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-8">
               Готовы присоединиться?
             </h3>
-            <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
-              Заполните простую форму регистрации и получите подтверждение на вашу почту
-            </p>
             <button
               onClick={handleRegisterClick}
               className="bg-purple-900 text-white font-bold px-12 py-5 text-xl hover:bg-purple-800 transition-all shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1 rounded-lg"
             >
               📝 Зарегистрироваться сейчас
             </button>
-            <p className="text-white/80 text-sm mt-6">
-              ⚡ Форма откроется в новой вкладке
-            </p>
           </div>
         </div>
 
