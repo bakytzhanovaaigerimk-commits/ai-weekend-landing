@@ -50,32 +50,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* Pricing section */}
-        <div className="bg-gradient-to-br from-purple-900 via-orange-900 to-purple-900 text-white p-12 rounded-2xl shadow-2xl relative overflow-hidden">
-          {/* Background decoration */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-orange-500/20 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl"></div>
-
-          <div className="max-w-3xl mx-auto text-center relative z-10">
-            <h3 className="text-4xl font-bold mb-6">Стоимость участия</h3>
-            <div className="bg-orange-950/50 p-8 rounded-xl border border-orange-500/30 mb-8">
-              <div className="text-7xl font-bold bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent mb-4">
-                2000 ₸
-              </div>
-              <p className="text-orange-100 text-lg">
-                Включает участие в обоих днях мероприятия
-              </p>
-            </div>
-            <div className="bg-purple-950/50 p-6 rounded-xl border border-purple-700">
-              <h4 className="text-2xl font-semibold mb-4 text-orange-400 flex items-center justify-center gap-2">
-                <span>💳</span> Как оплатить
-              </h4>
-              <p className="text-orange-100 text-lg leading-relaxed">
-                После регистрации вы получите детали для перевода на <span className="font-bold text-white">Kaspi</span>
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

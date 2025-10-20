@@ -28,16 +28,11 @@ export default function RegistrationForm() {
         </div>
 
         {/* Highlights */}
-        <div className="grid md:grid-cols-2 gap-6 mb-12 max-w-2xl mx-auto">
-          <div className="bg-purple-950/50 border border-orange-700 p-6 backdrop-blur-sm hover:border-orange-500 transition-all">
-            <div className="text-4xl mb-3">💰</div>
-            <h3 className="text-orange-300 font-bold mb-2">2000 ₸</h3>
-            <p className="text-orange-200/70 text-sm">Доступная цена участия</p>
-          </div>
-          <div className="bg-purple-950/50 border border-red-600 p-6 backdrop-blur-sm hover:border-red-500 transition-all">
-            <div className="text-4xl mb-3">⚠️</div>
-            <h3 className="text-red-300 font-bold mb-2">Всего 10 мест</h3>
-            <p className="text-red-400 text-sm font-semibold">Регистрируйтесь сейчас!</p>
+        <div className="mb-12 max-w-md mx-auto">
+          <div className="bg-purple-950/50 border border-red-600 p-8 backdrop-blur-sm hover:border-red-500 transition-all rounded-xl text-center">
+            <div className="text-5xl mb-4">⚠️</div>
+            <h3 className="text-red-300 font-bold text-2xl mb-2">Всего 10 мест</h3>
+            <p className="text-red-400 text-lg font-semibold">Регистрируйтесь сейчас!</p>
           </div>
         </div>
 
@@ -66,20 +61,13 @@ export default function RegistrationForm() {
         </div>
 
         {/* Additional info */}
-        <div className="mt-12 grid md:grid-cols-2 gap-6">
-          <div className="bg-purple-950/40 border border-orange-700 p-6 backdrop-blur-sm rounded-xl">
-            <h4 className="text-orange-400 font-bold mb-3 flex items-center gap-2">
-              <span className="text-2xl">📍</span> Место проведения
+        <div className="mt-12 max-w-md mx-auto">
+          <div className="bg-purple-950/40 border border-orange-700 p-6 backdrop-blur-sm rounded-xl text-center">
+            <h4 className="text-orange-400 font-bold mb-3 flex items-center justify-center gap-2 text-xl">
+              <span className="text-3xl">📍</span> Место проведения
             </h4>
-            <p className="text-orange-100">г. Астана</p>
-            <p className="text-orange-200/60 text-sm mt-1">Адрес будет отправлен после регистрации</p>
-          </div>
-          <div className="bg-purple-950/40 border border-orange-700 p-6 backdrop-blur-sm rounded-xl">
-            <h4 className="text-orange-400 font-bold mb-3 flex items-center gap-2">
-              <span className="text-2xl">💳</span> Оплата
-            </h4>
-            <p className="text-orange-100">Kaspi перевод</p>
-            <p className="text-orange-200/60 text-sm mt-1">Детали придут после регистрации</p>
+            <p className="text-orange-100 text-lg">г. Астана</p>
+            <p className="text-orange-200/60 text-sm mt-2">Адрес будет отправлен после регистрации</p>
           </div>
         </div>
       </div>
