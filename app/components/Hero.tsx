@@ -41,7 +41,7 @@ export default function Hero() {
 
         {/* Subtitle */}
         <p className={`text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed ${mounted ? 'animate-slide-up' : 'opacity-0'}`} style={{animationDelay: '0.2s'}}>
-          <span className="text-[#25f4ee] font-bold text-3xl">for AI Creators</span>
+          <span className="text-[#25f4ee] font-bold text-3xl">Присоединяйся к комьюнити AI-WEEKEND</span>
           <br />
           <span className="text-gray-400 text-lg">Интерактивный формат • Игры • Нетворкинг</span>
         </p>

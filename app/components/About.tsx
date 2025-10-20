@@ -13,12 +13,6 @@ export default function About() {
       title: 'AI-инструменты',
       desc: 'Stable Diffusion, Runway, Sora и другие пайплайны',
       color: 'from-[#25f4ee] to-[#4de8e0]'
-    },
-    {
-      icon: '🎯',
-      title: 'Готовый проект',
-      desc: 'Создашь свой клип с нуля за 1 день',
-      color: 'from-[#fe2c55] to-[#25f4ee]'
     }
   ];
 
@@ -38,7 +32,7 @@ export default function About() {
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 gap-6 mb-16 max-w-4xl mx-auto">
           {features.map((feature, idx) => (
             <div
               key={idx}
