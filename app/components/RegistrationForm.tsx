@@ -6,68 +6,95 @@ export default function RegistrationForm() {
   };
 
   return (
-    <section id="registration" className="py-24 px-4 bg-gradient-to-br from-purple-900 via-orange-900 to-purple-900 relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-orange-500 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
-      </div>
+    <section id="registration" className="py-24 px-6 bg-black relative overflow-hidden">
+      {/* Animated background effects */}
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#fe2c55] opacity-10 rounded-full blur-[120px] animate-pulse"></div>
+      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#25f4ee] opacity-10 rounded-full blur-[120px] animate-pulse" style={{animationDelay: '1s'}}></div>
 
       <div className="max-w-4xl mx-auto relative z-10">
+        {/* Header */}
         <div className="text-center mb-12">
-          <span className="text-orange-300 font-bold uppercase tracking-wider text-sm bg-orange-500/20 px-4 py-2 rounded-full border border-orange-400/50">
-            🎯 Регистрация открыта
-          </span>
-          <h2 className="text-5xl md:text-6xl font-bold mt-6 mb-6 bg-gradient-to-r from-orange-300 to-amber-300 bg-clip-text text-transparent">
-            Успей забронировать место!
+          <div className="inline-block mb-6">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#fe2c55] to-[#25f4ee] rounded-full text-sm font-bold">
+              <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+              🎯 РЕГИСТРАЦИЯ ОТКРЫТА
+            </span>
+          </div>
+
+          <h2 className="text-4xl md:text-6xl font-black text-white mb-6">
+            Забронируй своё место! 🚀
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-amber-500 mx-auto mb-8"></div>
-          <p className="text-xl text-orange-100 max-w-2xl mx-auto leading-relaxed">
-            Присоединяйтесь к <span className="text-orange-400 font-bold">AI WEEKEND</span> — два дня погружения в мир искусственного интеллекта
+          <div className="w-20 h-1 bg-gradient-to-r from-[#fe2c55] to-[#25f4ee] mx-auto mb-6"></div>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            Стань частью <span className="text-[#fe2c55] font-bold">AI WEEKEND</span> — создавай вирусный контент вместе с нами
           </p>
         </div>
 
-        {/* Highlights */}
-        <div className="grid md:grid-cols-2 gap-6 mb-12 max-w-3xl mx-auto">
-          <div className="bg-gradient-to-br from-green-900 to-emerald-900 border-2 border-green-500 p-8 backdrop-blur-sm transition-all rounded-xl text-center">
-            <div className="text-5xl mb-4">🎉</div>
-            <h3 className="text-green-300 font-bold text-3xl mb-2">БЕСПЛАТНО</h3>
-            <p className="text-green-200 text-lg">Участие полностью бесплатное!</p>
+        {/* Highlights Grid */}
+        <div className="grid md:grid-cols-2 gap-6 mb-12">
+          <div className="group relative bg-gradient-to-br from-[#fe2c55]/10 to-[#fe2c55]/5 border-2 border-[#fe2c55] p-8 rounded-2xl hover:scale-105 transition-all text-center">
+            <div className="text-5xl mb-4 animate-pulse">💰</div>
+            <h3 className="text-[#fe2c55] font-black text-3xl mb-2">2000 ₸</h3>
+            <p className="text-gray-300 text-lg">Раннее бронирование</p>
+            <p className="text-gray-400 text-sm mt-2">Успей по спец. цене!</p>
           </div>
-          <div className="bg-purple-950/50 border-2 border-red-600 p-8 backdrop-blur-sm hover:border-red-500 transition-all rounded-xl text-center">
-            <div className="text-5xl mb-4">⚠️</div>
-            <h3 className="text-red-300 font-bold text-2xl mb-2">Всего 10 мест</h3>
-            <p className="text-red-400 text-lg font-semibold">Регистрируйтесь сейчас!</p>
+
+          <div className="group relative bg-gradient-to-br from-[#25f4ee]/10 to-[#25f4ee]/5 border-2 border-[#25f4ee] p-8 rounded-2xl hover:scale-105 transition-all text-center">
+            <div className="text-5xl mb-4 animate-pulse">⚠️</div>
+            <h3 className="text-[#25f4ee] font-black text-3xl mb-2">10 мест</h3>
+            <p className="text-gray-300 text-lg">Ограниченные места</p>
+            <p className="text-gray-400 text-sm mt-2">Не упусти шанс!</p>
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="bg-gradient-to-br from-orange-500 to-amber-600 p-12 text-center relative overflow-hidden group hover:shadow-2xl hover:shadow-orange-500/30 transition-all rounded-xl">
-          {/* Shine effect */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
+        {/* Main CTA Card */}
+        <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 p-8 md:p-12 rounded-3xl overflow-hidden group">
+          {/* Animated gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#fe2c55]/0 via-[#fe2c55]/5 to-[#25f4ee]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
-          <div className="relative z-10">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-8">
-              Готовы присоединиться?
+          <div className="relative z-10 text-center">
+            <h3 className="text-2xl md:text-4xl font-black text-white mb-6">
+              Готов создавать крутой контент? 🔥
             </h3>
+
+            <p className="text-gray-300 mb-8 text-lg">
+              Жми кнопку и заполни форму регистрации
+            </p>
+
             <button
               onClick={handleRegisterClick}
-              className="bg-purple-900 text-white font-bold px-12 py-5 text-xl hover:bg-purple-800 transition-all shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1 rounded-lg"
+              className="group/btn relative px-10 py-5 bg-gradient-to-r from-[#fe2c55] to-[#25f4ee] rounded-full font-black text-xl overflow-hidden transition-all hover:scale-110 hover:shadow-[0_0_50px_rgba(254,44,85,0.6)] min-w-[280px]"
             >
-              📝 Зарегистрироваться сейчас
+              <span className="relative z-10 flex items-center justify-center gap-2">
+                ✨ Зарегистрироваться
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#25f4ee] to-[#fe2c55] opacity-0 group-hover/btn:opacity-100 transition-opacity"></div>
             </button>
+
+            <p className="text-gray-500 text-xs mt-6">
+              📱 Форма откроется в новой вкладке
+            </p>
           </div>
         </div>
 
-        {/* Additional info */}
-        <div className="mt-12 max-w-md mx-auto">
-          <div className="bg-purple-950/40 border border-orange-700 p-6 backdrop-blur-sm rounded-xl text-center">
-            <h4 className="text-orange-400 font-bold mb-3 flex items-center justify-center gap-2 text-xl">
-              <span className="text-3xl">📍</span> Место проведения
-            </h4>
-            <p className="text-orange-100 text-lg">г. Астана</p>
-            <p className="text-orange-200/60 text-sm mt-2">Адрес будет отправлен после регистрации</p>
+        {/* Location Info */}
+        <div className="mt-12">
+          <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-2xl">
+            <div className="flex items-center gap-4 justify-center">
+              <div className="text-3xl">📍</div>
+              <div className="text-left">
+                <h4 className="text-white font-bold text-lg">г. Астана</h4>
+                <p className="text-gray-400 text-sm">Адрес высылается после регистрации</p>
+              </div>
+            </div>
           </div>
+        </div>
+
+        {/* Social Proof */}
+        <div className="mt-8 text-center">
+          <p className="text-gray-400 text-sm">
+            Присоединяйся к комьюнити AI-креаторов 🎨
+          </p>
         </div>
       </div>
     </section>

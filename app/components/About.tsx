@@ -1,59 +1,109 @@
 'use client';
 
 export default function About() {
+  const features = [
+    {
+      icon: '✨',
+      title: 'Практические кейсы',
+      desc: 'Съёмка, генерация персонажей, монтаж и рендеринг',
+      color: 'from-[#fe2c55] to-[#ff6b88]'
+    },
+    {
+      icon: '⚡',
+      title: 'AI-инструменты',
+      desc: 'Stable Diffusion, Runway, Sora и другие пайплайны',
+      color: 'from-[#25f4ee] to-[#4de8e0]'
+    },
+    {
+      icon: '🎯',
+      title: 'Готовый проект',
+      desc: 'Создашь свой клип с нуля за 1 день',
+      color: 'from-[#fe2c55] to-[#25f4ee]'
+    }
+  ];
 
   return (
-    <section id="about" className="py-24 px-4 bg-gradient-to-b from-orange-50 to-amber-50">
-      <div className="max-w-6xl mx-auto">
+    <section id="about" className="py-24 px-6 bg-black relative overflow-hidden">
+      {/* Background effects */}
+      <div className="absolute top-1/4 right-0 w-96 h-96 bg-[#fe2c55] opacity-10 rounded-full blur-[100px]"></div>
+      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-[#25f4ee] opacity-10 rounded-full blur-[100px]"></div>
+
+      <div className="max-w-6xl mx-auto relative z-10">
+        {/* Section Title */}
         <div className="text-center mb-16">
-          <span className="text-orange-600 font-bold uppercase tracking-wider text-sm bg-orange-100 px-4 py-2 rounded-full border border-orange-300">
-            📋 Что вас ждёт
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-6 mb-6 bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">
-            Программа AI WEEKEND
+          <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
+            Что вас ждёт 🎬
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-amber-500 mx-auto mb-8"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-[#fe2c55] to-[#25f4ee] mx-auto"></div>
         </div>
 
-        {/* Host section */}
-        <div className="max-w-2xl mx-auto mb-16">
-          <div className="bg-white p-10 rounded-2xl shadow-xl border-2 border-orange-200 hover:border-orange-400 transition-all">
-            <div className="mb-6">
-              <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-orange-100 to-amber-100 overflow-hidden mb-6 ring-4 ring-orange-300 ring-offset-4">
-                <img
-                  src="/host-photo.jpg"
-                  alt="Диас Жумагалиев"
-                  className="w-full h-full object-cover"
-                />
+        {/* Features Grid */}
+        <div className="grid md:grid-cols-3 gap-6 mb-16">
+          {features.map((feature, idx) => (
+            <div
+              key={idx}
+              className="group relative bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl hover:border-white/30 transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(254,44,85,0.2)]"
+            >
+              <div className="text-5xl mb-4 animate-float" style={{animationDelay: `${idx * 0.2}s`}}>
+                {feature.icon}
+              </div>
+              <h3 className={`text-2xl font-bold mb-3 bg-gradient-to-r ${feature.color} bg-clip-text text-transparent`}>
+                {feature.title}
+              </h3>
+              <p className="text-gray-400">
+                {feature.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* Host Card */}
+        <div className="max-w-3xl mx-auto bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 rounded-3xl p-8 md:p-12 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#fe2c55] opacity-10 rounded-full blur-3xl"></div>
+
+          <div className="relative z-10 flex flex-col md:flex-row items-center gap-8">
+            <div className="flex-shrink-0">
+              <div className="w-32 h-32 rounded-full bg-gradient-to-br from-[#fe2c55] to-[#25f4ee] p-1">
+                <div className="w-full h-full rounded-full bg-black flex items-center justify-center text-5xl">
+                  👨‍💼
+                </div>
               </div>
             </div>
-            <h3 className="text-3xl font-bold text-slate-900 mb-3 text-center">
-              🗣 Спикер: Диас Жумагалиев
-            </h3>
+
+            <div className="flex-1 text-center md:text-left">
+              <div className="inline-block px-3 py-1 bg-[#fe2c55]/20 border border-[#fe2c55]/30 rounded-full text-sm font-bold text-[#fe2c55] mb-3">
+                ВЕДУЩИЙ
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                Диас Жумагалиев
+              </h3>
+              <p className="text-gray-400 mb-4">
+                Эксперт по AI-генерации видео и motion-дизайну
+              </p>
+              <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+                <span className="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300">20+ проектов</span>
+                <span className="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300">AI Creator</span>
+                <span className="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300">TikTok Expert</span>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Program highlights */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          <div className="bg-white p-8 rounded-xl shadow-lg border border-orange-200 hover:border-orange-400 hover:shadow-xl transition-all group">
-            <div className="text-6xl mb-4 transform group-hover:scale-110 transition-transform">🎮</div>
-            <h3 className="text-2xl font-bold text-orange-700 mb-3">Интерактивный формат</h3>
-            <p className="text-slate-600 text-lg">
-              Игры • Нетворкинг • Делимся опытом и лайфхаками
-            </p>
-          </div>
-          <div className="bg-gradient-to-br from-red-50 to-orange-100 p-8 rounded-xl shadow-lg border-2 border-red-400 hover:shadow-xl transition-all group">
-            <div className="text-6xl mb-4 transform group-hover:scale-110 transition-transform">⚠️</div>
-            <h3 className="text-2xl font-bold text-red-700 mb-3">Места ограничены!</h3>
-            <p className="text-red-600 text-lg font-semibold">
-              Максимум 10 человек
-            </p>
-            <p className="text-slate-600 mt-2">
-              Успейте зарегистрироваться пока есть свободные места
-            </p>
+        {/* Limited Places Warning */}
+        <div className="mt-12 max-w-2xl mx-auto">
+          <div className="bg-gradient-to-r from-[#fe2c55]/10 to-[#25f4ee]/10 border-2 border-[#fe2c55] rounded-2xl p-6 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-[#fe2c55] opacity-20 rounded-full blur-2xl"></div>
+            <div className="relative z-10 flex items-center gap-4">
+              <div className="text-4xl animate-pulse">⚠️</div>
+              <div className="flex-1">
+                <h4 className="text-xl font-bold text-white mb-1">Всего 10 мест!</h4>
+                <p className="text-gray-300 text-sm">
+                  Интерактивный формат • Игры • Нетворкинг • Делимся опытом
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-
       </div>
     </section>
   );

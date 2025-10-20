@@ -27,36 +27,44 @@ export default function Navigation() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-slate-900/95 backdrop-blur-sm border-b border-slate-800' : 'bg-transparent'
+        isScrolled
+          ? 'bg-black/80 backdrop-blur-xl border-b border-white/10 shadow-[0_0_20px_rgba(254,44,85,0.1)]'
+          : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center h-16">
+          {/* Logo */}
           <div
-            className="text-xl font-bold cursor-pointer text-white flex items-center gap-2"
+            className="text-xl font-black cursor-pointer text-white flex items-center gap-2 hover:scale-105 transition-transform"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            <span className="text-orange-400">AI Crew</span>
-            <span>Connect</span>
+            <span className="bg-gradient-to-r from-[#fe2c55] to-[#25f4ee] bg-clip-text text-transparent">
+              AI WEEKEND
+            </span>
           </div>
 
-          <div className="hidden md:flex space-x-8">
+          {/* Navigation Links */}
+          <div className="hidden md:flex items-center space-x-8">
             {sections.map((section) => (
               <button
                 key={section.id}
                 onClick={() => scrollToSection(section.id)}
-                className="text-orange-200 hover:text-orange-400 font-medium transition-colors"
+                className="text-gray-300 hover:text-white font-medium transition-all hover:scale-110 relative group"
               >
                 {section.label}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#fe2c55] to-[#25f4ee] group-hover:w-full transition-all duration-300"></span>
               </button>
             ))}
           </div>
 
+          {/* CTA Button */}
           <button
-            onClick={() => window.open('https://forms.gle/bp5uo3LpeFHqjNzJ7', '_blank')}
-            className="bg-gradient-to-r from-orange-500 to-amber-500 text-white px-6 py-2 font-medium transition-all hover:from-orange-600 hover:to-amber-600 rounded"
+            onClick={() => scrollToSection('registration')}
+            className="relative px-6 py-2.5 bg-gradient-to-r from-[#fe2c55] to-[#25f4ee] rounded-full font-bold text-sm overflow-hidden group hover:scale-105 transition-all hover:shadow-[0_0_20px_rgba(254,44,85,0.5)]"
           >
-            Регистрация
+            <span className="relative z-10">Купить билет</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#25f4ee] to-[#fe2c55] opacity-0 group-hover:opacity-100 transition-opacity"></div>
           </button>
         </div>
       </div>
