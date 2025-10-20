@@ -1,138 +1,74 @@
 'use client';
 
-import { useState } from 'react';
-
 export default function RegistrationForm() {
-  const [formData, setFormData] = useState({
-    fullName: '',
-    phone: '',
-    email: '',
-    status: '',
-    comment: '',
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Обработка отправки формы
-    console.log('Form submitted:', formData);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleRegisterClick = () => {
+    window.open('https://forms.gle/bp5uo3LpeFHqjNzJ7', '_blank');
   };
 
   return (
-    <section id="registration" className="py-24 px-6 bg-[#0f1724] relative overflow-hidden">
+    <section id="registration" className="py-24 px-4 bg-gradient-to-br from-purple-900 via-orange-900 to-purple-900 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-[#ff2d55]/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-[#40e0d0]/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-20 left-20 w-72 h-72 bg-orange-500 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
       </div>
 
-      <div className="max-w-2xl mx-auto relative z-10">
+      <div className="max-w-4xl mx-auto relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Зарегистрироваться
+          <span className="text-orange-300 font-bold uppercase tracking-wider text-sm bg-orange-500/20 px-4 py-2 rounded-full border border-orange-400/50">
+            🎯 Регистрация открыта
+          </span>
+          <h2 className="text-5xl md:text-6xl font-bold mt-6 mb-6 bg-gradient-to-r from-orange-300 to-amber-300 bg-clip-text text-transparent">
+            Успей забронировать место!
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#ff2d55] to-[#40e0d0] mx-auto mb-6"></div>
-          <p className="text-[#9aa4b2] max-w-xl mx-auto">
-            Оставь данные — мы пришлём подтверждение и ссылку на оплату
+          <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-amber-500 mx-auto mb-8"></div>
+          <p className="text-xl text-orange-100 max-w-2xl mx-auto leading-relaxed">
+            Присоединяйтесь к <span className="text-orange-400 font-bold">AI WEEKEND</span> — два дня погружения в мир искусственного интеллекта
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 space-y-6">
-          <div>
-            <label htmlFor="fullName" className="block text-white font-medium mb-2 text-sm">
-              ФИО *
-            </label>
-            <input
-              type="text"
-              id="fullName"
-              name="fullName"
-              required
-              value={formData.fullName}
-              onChange={handleChange}
-              className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-[#9aa4b2] focus:border-[#ff2d55] focus:outline-none transition-colors"
-              placeholder="Введите ваше полное имя"
-            />
+        {/* Highlights */}
+        <div className="grid md:grid-cols-2 gap-6 mb-12 max-w-3xl mx-auto">
+          <div className="bg-gradient-to-br from-green-900 to-emerald-900 border-2 border-green-500 p-8 backdrop-blur-sm transition-all rounded-xl text-center">
+            <div className="text-5xl mb-4">🎉</div>
+            <h3 className="text-green-300 font-bold text-3xl mb-2">БЕСПЛАТНО</h3>
+            <p className="text-green-200 text-lg">Участие полностью бесплатное!</p>
           </div>
-
-          <div>
-            <label htmlFor="phone" className="block text-white font-medium mb-2 text-sm">
-              Телефон (Kaspi) *
-            </label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              required
-              value={formData.phone}
-              onChange={handleChange}
-              className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-[#9aa4b2] focus:border-[#ff2d55] focus:outline-none transition-colors"
-              placeholder="+7 (___) ___-__-__"
-            />
+          <div className="bg-purple-950/50 border-2 border-red-600 p-8 backdrop-blur-sm hover:border-red-500 transition-all rounded-xl text-center">
+            <div className="text-5xl mb-4">⚠️</div>
+            <h3 className="text-red-300 font-bold text-2xl mb-2">Всего 10 мест</h3>
+            <p className="text-red-400 text-lg font-semibold">Регистрируйтесь сейчас!</p>
           </div>
+        </div>
 
-          <div>
-            <label htmlFor="email" className="block text-white font-medium mb-2 text-sm">
-              E-mail
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-[#9aa4b2] focus:border-[#ff2d55] focus:outline-none transition-colors"
-              placeholder="email@example.com"
-            />
-          </div>
+        {/* CTA Section */}
+        <div className="bg-gradient-to-br from-orange-500 to-amber-600 p-12 text-center relative overflow-hidden group hover:shadow-2xl hover:shadow-orange-500/30 transition-all rounded-xl">
+          {/* Shine effect */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
 
-          <div>
-            <label htmlFor="status" className="block text-white font-medium mb-2 text-sm">
-              Юридический статус *
-            </label>
-            <select
-              id="status"
-              name="status"
-              required
-              value={formData.status}
-              onChange={handleChange}
-              className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:border-[#ff2d55] focus:outline-none transition-colors"
+          <div className="relative z-10">
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-8">
+              Готовы присоединиться?
+            </h3>
+            <button
+              onClick={handleRegisterClick}
+              className="bg-purple-900 text-white font-bold px-12 py-5 text-xl hover:bg-purple-800 transition-all shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1 rounded-lg"
             >
-              <option value="" className="bg-[#0b1220]">Выберите статус</option>
-              <option value="Самозанятый" className="bg-[#0b1220]">Самозанятый</option>
-              <option value="ИП" className="bg-[#0b1220]">ИП</option>
-              <option value="Физ. лицо" className="bg-[#0b1220]">Физ. лицо</option>
-            </select>
+              📝 Зарегистрироваться сейчас
+            </button>
           </div>
+        </div>
 
-          <div>
-            <label htmlFor="comment" className="block text-white font-medium mb-2 text-sm">
-              Комментарий
-            </label>
-            <textarea
-              id="comment"
-              name="comment"
-              rows={3}
-              value={formData.comment}
-              onChange={handleChange}
-              className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-[#9aa4b2] focus:border-[#ff2d55] focus:outline-none transition-colors resize-none"
-              placeholder="Дополнительная информация (необязательно)"
-            />
+        {/* Additional info */}
+        <div className="mt-12 max-w-md mx-auto">
+          <div className="bg-purple-950/40 border border-orange-700 p-6 backdrop-blur-sm rounded-xl text-center">
+            <h4 className="text-orange-400 font-bold mb-3 flex items-center justify-center gap-2 text-xl">
+              <span className="text-3xl">📍</span> Место проведения
+            </h4>
+            <p className="text-orange-100 text-lg">г. Астана</p>
+            <p className="text-orange-200/60 text-sm mt-2">Адрес будет отправлен после регистрации</p>
           </div>
-
-          <button
-            type="submit"
-            className="w-full bg-gradient-to-r from-[#ff2d55] to-[#40e0d0] text-white font-bold px-8 py-4 rounded-xl hover:shadow-lg hover:shadow-[#ff2d55]/30 transition-all transform hover:scale-[1.02]"
-          >
-            Зарегистрироваться и оплатить
-          </button>
-
-          <p className="text-[#9aa4b2] text-xs text-center">
-            Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.
-          </p>
-        </form>
+        </div>
       </div>
     </section>
   );
