@@ -1,24 +1,34 @@
 export default function Footer() {
   return (
-    <footer className="bg-slate-950 text-white py-12 px-4 border-t border-slate-800">
+    <footer className="bg-[#050612] text-[#9aa4b2] py-12 px-6 border-t border-white/5">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-bold mb-4 text-cyan-500">AI WEEKEND 2025</h3>
-            <p className="text-slate-400 leading-relaxed flex items-center gap-2">
-              <span className="text-cyan-500">📍</span>
-              г. Астана
-            </p>
+            <h3 className="text-lg font-bold mb-4 bg-gradient-to-r from-[#ff2d55] to-[#40e0d0] bg-clip-text text-transparent">
+              О событии
+            </h3>
+            <ul className="space-y-2">
+              <li><a href="#" className="hover:text-white transition-colors text-sm">О нас</a></li>
+              <li><a href="#" className="hover:text-white transition-colors text-sm">Контакты</a></li>
+            </ul>
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Мы в соцсетях</h4>
+            <h3 className="text-lg font-bold mb-4 text-white">Правила</h3>
+            <ul className="space-y-2">
+              <li><a href="#" className="hover:text-white transition-colors text-sm">Политика конфиденциальности</a></li>
+              <li><a href="#" className="hover:text-white transition-colors text-sm">Возврат средств</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-bold mb-4 text-white">Соцсети</h3>
             <div className="flex space-x-4">
               <a
-                href="https://www.instagram.com/code_on_vibe/"
+                href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-400 hover:text-cyan-500 transition-colors"
+                className="text-[#9aa4b2] hover:text-[#ff2d55] transition-colors"
                 aria-label="Instagram"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -26,33 +36,22 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://t.me/ai_corgi"
+                href="https://tiktok.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-400 hover:text-cyan-500 transition-colors"
-                aria-label="Telegram"
+                className="text-[#9aa4b2] hover:text-[#40e0d0] transition-colors"
+                aria-label="TikTok"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
-                </svg>
-              </a>
-              <a
-                href="https://www.youtube.com/@noaicancode"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-400 hover:text-cyan-500 transition-colors"
-                aria-label="YouTube"
-              >
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
                 </svg>
               </a>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-slate-800 pt-8 text-center text-slate-500">
-          <p>&copy; 2025 AI WEEKEND. Все права защищены.</p>
+        <div className="border-t border-white/5 pt-8 text-center text-sm">
+          <p>&copy; 2025 AI Форум</p>
         </div>
       </div>
     </footer>

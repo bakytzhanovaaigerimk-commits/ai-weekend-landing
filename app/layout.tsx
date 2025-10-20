@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "AI WEEKEND - AI Crew Connect",
-  description: "AI WEEKEND для AI Creators. 25-26 октября 2025, г. Астана. Интерактивный формат, игры, нетворкинг.",
+  title: "AI Форум — Как сделать клип/мультик через ИИ",
+  description: "Воркшоп: как сделать полноценный клип/мультик через ИИ. 4 спикера, практический мастер-класс, нетворкинг и кейс-ревью.",
 };
 
 export default function RootLayout({
