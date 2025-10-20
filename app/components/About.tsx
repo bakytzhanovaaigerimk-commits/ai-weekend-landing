@@ -19,8 +19,12 @@ export default function About() {
         <div className="max-w-2xl mx-auto mb-16">
           <div className="bg-white p-10 rounded-2xl shadow-xl border-2 border-orange-200 hover:border-orange-400 transition-all">
             <div className="mb-6">
-              <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-orange-100 to-amber-100 overflow-hidden mb-6 ring-4 ring-orange-300 ring-offset-4 flex items-center justify-center">
-                <div className="text-7xl">🎤</div>
+              <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-orange-100 to-amber-100 overflow-hidden mb-6 ring-4 ring-orange-300 ring-offset-4">
+                <img
+                  src="/host-photo.jpg"
+                  alt="Диас Жумагалиев"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             <h3 className="text-3xl font-bold text-slate-900 mb-3 text-center">
