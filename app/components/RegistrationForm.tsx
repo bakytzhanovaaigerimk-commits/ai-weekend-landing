@@ -28,8 +28,13 @@ export default function RegistrationForm() {
         </div>
 
         {/* Highlights */}
-        <div className="mb-12 max-w-md mx-auto">
-          <div className="bg-purple-950/50 border border-red-600 p-8 backdrop-blur-sm hover:border-red-500 transition-all rounded-xl text-center">
+        <div className="grid md:grid-cols-2 gap-6 mb-12 max-w-3xl mx-auto">
+          <div className="bg-gradient-to-br from-green-900 to-emerald-900 border-2 border-green-500 p-8 backdrop-blur-sm transition-all rounded-xl text-center">
+            <div className="text-5xl mb-4">🎉</div>
+            <h3 className="text-green-300 font-bold text-3xl mb-2">БЕСПЛАТНО</h3>
+            <p className="text-green-200 text-lg">Участие полностью бесплатное!</p>
+          </div>
+          <div className="bg-purple-950/50 border-2 border-red-600 p-8 backdrop-blur-sm hover:border-red-500 transition-all rounded-xl text-center">
             <div className="text-5xl mb-4">⚠️</div>
             <h3 className="text-red-300 font-bold text-2xl mb-2">Всего 10 мест</h3>
             <p className="text-red-400 text-lg font-semibold">Регистрируйтесь сейчас!</p>
