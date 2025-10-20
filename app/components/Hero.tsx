@@ -28,25 +28,22 @@ export default function Hero() {
         <div className={`inline-block mb-8 ${mounted ? 'animate-slide-up' : 'opacity-0'}`}>
           <span className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#fe2c55] to-[#25f4ee] rounded-full text-sm font-bold">
             <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-            LIVE ВОРКШОП
+            AI CREW CONNECT
           </span>
         </div>
 
         {/* Main Title with glitch effect */}
         <h1 className={`text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight ${mounted ? 'animate-slide-up' : 'opacity-0'}`} style={{animationDelay: '0.1s'}}>
           <span className="block bg-gradient-to-r from-[#fe2c55] via-white to-[#25f4ee] bg-clip-text text-transparent hover:animate-glitch cursor-default">
-            Создай клип/мультик
-          </span>
-          <span className="block text-white mt-2">
-            через <span className="text-neon text-[#fe2c55]">ИИ</span>
+            AI WEEKEND
           </span>
         </h1>
 
         {/* Subtitle */}
         <p className={`text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed ${mounted ? 'animate-slide-up' : 'opacity-0'}`} style={{animationDelay: '0.2s'}}>
-          🎬 За 1 день научись создавать <span className="text-[#25f4ee] font-bold">AI-контент</span> как в TikTok
+          <span className="text-[#25f4ee] font-bold text-3xl">for AI Creators</span>
           <br />
-          <span className="text-gray-400 text-lg">4 спикера • Практика • Готовый проект</span>
+          <span className="text-gray-400 text-lg">Интерактивный формат • Игры • Нетворкинг</span>
         </p>
 
         {/* CTA Buttons */}
@@ -60,7 +57,7 @@ export default function Hero() {
               <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12"></div>
             </div>
             <span className="relative z-10 flex items-center justify-center gap-2">
-              🎫 Купить билет — 2000₸
+              🎉 БЕСПЛАТНО
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-[#25f4ee] to-[#fe2c55] opacity-0 group-hover:opacity-100 transition-opacity"></div>
           </button>
@@ -78,18 +75,16 @@ export default function Hero() {
         </div>
 
         {/* Stats */}
-        <div className={`grid grid-cols-3 gap-8 max-w-2xl mx-auto ${mounted ? 'animate-slide-up' : 'opacity-0'}`} style={{animationDelay: '0.4s'}}>
+        <div className={`grid grid-cols-2 gap-8 max-w-md mx-auto ${mounted ? 'animate-slide-up' : 'opacity-0'}`} style={{animationDelay: '0.4s'}}>
           <div className="text-center">
-            <div className="text-3xl font-bold text-[#fe2c55] mb-1">4</div>
-            <div className="text-sm text-gray-400">Спикера</div>
+            <div className="text-4xl font-bold text-[#25f4ee] mb-1">🎉</div>
+            <div className="text-2xl font-black text-white mb-1">БЕСПЛАТНО</div>
+            <div className="text-sm text-gray-400">Участие</div>
           </div>
-          <div className="text-center border-l border-r border-white/10">
-            <div className="text-3xl font-bold text-[#25f4ee] mb-1">10</div>
-            <div className="text-sm text-gray-400">Мест</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-white mb-1">1</div>
-            <div className="text-sm text-gray-400">День</div>
+          <div className="text-center border-l border-white/10">
+            <div className="text-4xl font-bold text-[#fe2c55] mb-1">⚠️</div>
+            <div className="text-2xl font-black text-white mb-1">10 мест</div>
+            <div className="text-sm text-gray-400">Максимум</div>
           </div>
         </div>
 

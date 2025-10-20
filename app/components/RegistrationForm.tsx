@@ -26,24 +26,24 @@ export default function RegistrationForm() {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-[#fe2c55] to-[#25f4ee] mx-auto mb-6"></div>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Стань частью <span className="text-[#fe2c55] font-bold">AI WEEKEND</span> — создавай вирусный контент вместе с нами
+            Присоединяйся к <span className="text-[#fe2c55] font-bold">AI WEEKEND</span> — интерактивный формат, игры и нетворкинг
           </p>
         </div>
 
         {/* Highlights Grid */}
         <div className="grid md:grid-cols-2 gap-6 mb-12">
-          <div className="group relative bg-gradient-to-br from-[#fe2c55]/10 to-[#fe2c55]/5 border-2 border-[#fe2c55] p-8 rounded-2xl hover:scale-105 transition-all text-center">
-            <div className="text-5xl mb-4 animate-pulse">💰</div>
-            <h3 className="text-[#fe2c55] font-black text-3xl mb-2">2000 ₸</h3>
-            <p className="text-gray-300 text-lg">Раннее бронирование</p>
-            <p className="text-gray-400 text-sm mt-2">Успей по спец. цене!</p>
+          <div className="group relative bg-gradient-to-br from-green-500/10 to-green-500/5 border-2 border-green-500 p-8 rounded-2xl hover:scale-105 transition-all text-center">
+            <div className="text-5xl mb-4 animate-pulse">🎉</div>
+            <h3 className="text-green-400 font-black text-3xl mb-2">БЕСПЛАТНО</h3>
+            <p className="text-gray-300 text-lg">Участие полностью бесплатное!</p>
+            <p className="text-gray-400 text-sm mt-2">Не упусти шанс!</p>
           </div>
 
-          <div className="group relative bg-gradient-to-br from-[#25f4ee]/10 to-[#25f4ee]/5 border-2 border-[#25f4ee] p-8 rounded-2xl hover:scale-105 transition-all text-center">
+          <div className="group relative bg-gradient-to-br from-[#fe2c55]/10 to-[#fe2c55]/5 border-2 border-[#fe2c55] p-8 rounded-2xl hover:scale-105 transition-all text-center">
             <div className="text-5xl mb-4 animate-pulse">⚠️</div>
-            <h3 className="text-[#25f4ee] font-black text-3xl mb-2">10 мест</h3>
+            <h3 className="text-[#fe2c55] font-black text-3xl mb-2">10 мест</h3>
             <p className="text-gray-300 text-lg">Ограниченные места</p>
-            <p className="text-gray-400 text-sm mt-2">Не упусти шанс!</p>
+            <p className="text-gray-400 text-sm mt-2">Регистрируйся сейчас!</p>
           </div>
         </div>
 
@@ -54,11 +54,11 @@ export default function RegistrationForm() {
 
           <div className="relative z-10 text-center">
             <h3 className="text-2xl md:text-4xl font-black text-white mb-6">
-              Готов создавать крутой контент? 🔥
+              Готовы присоединиться? 🔥
             </h3>
 
             <p className="text-gray-300 mb-8 text-lg">
-              Жми кнопку и заполни форму регистрации
+              Регистрируйся сейчас — места ограничены!
             </p>
 
             <button

@@ -66,8 +66,8 @@ export default function Navigation() {
             {/* Shimmer on hover */}
             <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
             <span className="relative z-10 inline-flex items-center gap-1">
-              <span className="animate-bounce-slow inline-block">🎫</span>
-              Купить билет
+              <span className="animate-bounce-slow inline-block">🎉</span>
+              Регистрация
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-[#25f4ee] to-[#fe2c55] opacity-0 group-hover:opacity-100 transition-opacity"></div>
           </button>
